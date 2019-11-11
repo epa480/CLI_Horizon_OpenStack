@@ -13,7 +13,8 @@ openstack flavor show
 openstack flavor unset
 ```
 
-#### 1. list #### 
+#### 1. list ####
+
 ```bash
 # comando
 $ openstack flavor list # Lista os flavors
@@ -38,6 +39,7 @@ $ openstack flavor list # Lista os flavors
 ```
 
 #### 2. show ####
+
 ```bash
 # comando
 $ openstack flavor show <name ou ID> # Mostra as configurações de um flavor específico
@@ -86,6 +88,7 @@ $ openstack flavor show ds1G
 ```
 
 #### 3. create ####
+
 ```bash
 # comando
 openstack flavor create <flavor-name>
@@ -146,7 +149,8 @@ openstack flavor create teste2 --ram 512 --disk 10 --vcpus 2 --private
 ```
 
 #### 4. delete ####
-``bash
+
+```bash
 # comando
 $ openstack flavor delete <Flavor name or ID>
 
@@ -184,7 +188,7 @@ $ openstack flavor set teste \
 | vcpus                      | 1                                                                 |
 +----------------------------+-------------------------------------------------------------------+
 ```
-#### unset ####
+#### 6. unset ####
 ```bash
 # comando
 openstack flavor unset <Flavor name or ID>  # Remove os dados cadastrados no campo propriedades
