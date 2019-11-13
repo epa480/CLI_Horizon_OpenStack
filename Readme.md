@@ -6,7 +6,27 @@
 
 #### Pré-Requisitos ####
 
-Falta escrever sobre os pré-requisitos
+O Openstack utiliza os plugins de autenticação python-keystoneclient que oferece suporte a vários métodos de autenticação.
+
+##### Autenticação #####
+
+###### via senha ######
+Esse é o tipo de autenticação mais comum. São requisitados: 
+``` bash
+# Parâmetros obrigatórios
+--os-auth-url    	# URL para autenticação com o serviço de identidade
+--os-project-name	# Um projeto
+--os-username		# Usuário
+
+# Parâmetros opcionais
+--os-password		# Senha do usuário 
+```
+
+
+um projeto, nome de usuário e senha para identificação do usuário. 
+ 
+
+###### via token######
 
 #### Comando Geral #### 
 ```bash
