@@ -84,7 +84,7 @@ Date: Tue, 10 Jun 2014 20:55:16 GMT
 ```
 O token é retornado na variável 'X-Subject-Token', localizado na segunda linha da resposta
 
-O trecho de código abaixo apresenta uma requisição ao OpenStack para verificar as informações da topologia de redes.
+O trecho de código abaixo apresenta uma requisição ao OpenStack para verificar as informações dos recursos de rede.
 ```curl
 OS_TOKEN='gAAAAABb10ZSi7Eu7LxOJySkahFPIaCa8VgpPQ2OqpqBTB7HjB-dId0-4JSTTIvKfVIHIEy1iKhsRuJLzMKgMzxsU8NvRaxxO7xAr0zpdvsTHx-iqR0ziPtCvcFKMZGKZoecnbtw2m1c4vymvZcpsxE7aT2KQWqNWFeKA4A51Ab0DKTaW1zWCqc'
 curl -s \
@@ -92,7 +92,7 @@ curl -s \
   "http://192.168.0.65:9696/v2.0/" | python -mjson.tool
 ```
 
-É retornado os recursos de rede, com as URLs para cada recurso: subnets, subnetpools, networks, ports.
+É retornado os recursos de rede, com as URLs para cada recurso: **subnets**, **subnetpools**, **networks**, **ports**.
 ```
 {
     "resources": [
