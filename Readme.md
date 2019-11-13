@@ -3,7 +3,7 @@
 
 ## Via Horizon ##
 
-![](/Figuras/tela_inicial.png)
+![Figura 1 - Visão Geral](/Figuras/tela_inicial.png)
 
 
 ## Via CLI ##
