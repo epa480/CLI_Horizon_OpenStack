@@ -1,9 +1,34 @@
 # Minicurso - OpenStack #
 
+## 1. Agenda
 
-## Via Horizon ##
+Escrever a agenda do minicurso
 
-![Figura 1 - Visão Geral](/Figuras/tela_inicial.png)
+
+## 2. Introdução ##
+
+O minicurso de instalação e operação do OpenStack está voltado para os módulos básicos do OpenStack, Keystone, Nova, Neutron e Glance.
+
+- Keystone - É o serviço de identidade usado pelo OpenStack par autenticação (authN) e autorização de alto nível (authZ). Ele oferece suporte a authN baseado em token e autorização de serviço do usuário. 
+- Nova - É o serviço que faz o provisionamento de instancias de computação. Suporta a criação de VMs, servidores baremetais (através do uso de ironic) e possui suporte limitado para contêineres do sistema. Ele depende de alguns serviços, tais como, Keystone, Glance, Neutron, Placement.
+- Neutron - É responsável pelo gerencimanto dos recursos de rede do OpenStack. Ele cria as vNICs para as VMs, redes, subnets etc.
+- Glance - É responsável por gerir as imagens que são usadas nas VMs.
+
+## Operação do OpenStack via Horizon ##
+
+### Visão Geral do OpenStack ###
+
+![](/Figuras/tela_inicial.png)
+Figura 1 - Visão Geral
+
+Aba Projeto - Mostra todos os recursos de um projeto para gerência e execução. Os recursos são divididos em duas partes: Computação (Instâncias, Imagens, Pares de Chave,) e Rede (Redes, Roteadores, Grupos de Segurança e IPs Flutuantes).
+
+Aba Admin - 
+
+### ###
+
+
+
 
 
 ## Via CLI ##
