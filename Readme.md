@@ -1,12 +1,20 @@
-# Operação do OpenStack via CLI #
+# Minicurso - OpenStack #
 
-## Pré-Requisitos ##
+
+## Via Horizon ##
+
+
+
+
+## Via CLI ##
+
+### Pré-Requisitos ###
 
 O Openstack utiliza os plugins de autenticação python-keystoneclient que oferece suporte a vários métodos de autenticação.
 
-### Autenticação ###
+#### Autenticação ####
 
-#### via senha ####
+##### via senha #####
 Esse é o tipo de autenticação mais comum. São requisitados: 
 ``` bash
 # Parâmetros obrigatórios
@@ -136,7 +144,7 @@ curl -s \
 }
 ```
 
-## Comandos Comuns ##
+### Comandos Básicos ###
 Depois da autenticação, podemos operar o OpenStack via CLI utilizando o python-keystoneclient.
 
 Para listar todos os comandos que podem ser utilizados no OpenStack, utilizamos o seguinte comando.
@@ -160,18 +168,9 @@ $ openstack server create -h
 # retorna a forma de utilização do comando 'openstack server create'
 ```
 
+Escrever aqui em baixo
 
-#### Comandos Comuns #### 
-```bash
-openstack --version
-openstack availability zone list # 
-openstack configuration show
-openstack extension list
-openstack extension show
-openstack versions show
-```
-
-#### Compute ####
+##### Compute #####
 ```bash
 openstack agregate
 compute compute agent
@@ -184,7 +183,7 @@ openstack server
 openstack usage
 ```
 
-#### Identity ####
+##### Identity #####
 ```bash
 openstack access token 
 openstack application credential
@@ -198,17 +197,17 @@ openstack user
 openstack region
 ```
 
-#### Image ####
+##### Image #####
 ```bash
 openstack image
 ```
 
-#### Metric ####
+##### Metric #####
 ```bash
 openstack metrick resource <list or show <ID>>
 ```
 
-#### Network #### 
+##### Network ##### 
 ```bash
 openstack floating ip
 openstack ip availability
@@ -219,7 +218,7 @@ openstack router
 openstack subnet
 ```
 
-#### Volume ####
+##### Volume #####
 ```bash
 openstack backup
 openstack snapshot
