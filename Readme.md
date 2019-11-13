@@ -53,7 +53,7 @@ curl -i \
 ```
 
 Resposta da requisição
-``` curl
+```
 HTTP/1.1 201 Created
 X-Subject-Token: MIIFvgY...
 Vary: X-Auth-Token
@@ -83,6 +83,63 @@ Date: Tue, 10 Jun 2014 20:55:16 GMT
 ...
 ```
 O token é retornado na variável 'X-Subject-Token', localizado na segunda linha da resposta
+
+O trecho de código abaixo apresenta uma requisição ao OpenStack para verificar as informações da topologia de redes.
+```curl
+OS_TOKEN='gAAAAABb10ZSi7Eu7LxOJySkahFPIaCa8VgpPQ2OqpqBTB7HjB-dId0-4JSTTIvKfVIHIEy1iKhsRuJLzMKgMzxsU8NvRaxxO7xAr0zpdvsTHx-iqR0ziPtCvcFKMZGKZoecnbtw2m1c4vymvZcpsxE7aT2KQWqNWFeKA4A51Ab0DKTaW1zWCqc'
+curl -s \
+  -H "X-Auth-Token: $OS_TOKEN" \
+  "http://192.168.0.65:9696/v2.0/" | python -mjson.tool
+```
+
+É retornado os recursos de rede, com as URLs para cada recurso: subnets, subnetpools, networks, ports.
+```
+{
+    "resources": [
+        {
+            "collection": "subnets",
+            "links": [
+                {
+                    "href": "http://192.168.0.65:9696/v2.0/subnets",
+                    "rel": "self"
+                }
+            ],
+            "name": "subnet"
+        },
+        {
+            "collection": "subnetpools",
+            "links": [
+                {
+                    "href": "http://192.168.0.65:9696/v2.0/subnetpools",
+                    "rel": "self"
+                }
+            ],
+            "name": "subnetpool"
+        },
+        {
+            "collection": "networks",
+            "links": [
+                {
+                    "href": "http://192.168.0.65:9696/v2.0/networks",
+                    "rel": "self"
+                }
+            ],
+            "name": "network"
+        },
+        {
+            "collection": "ports",
+            "links": [
+                {
+                    "href": "http://192.168.0.65:9696/v2.0/ports",
+                    "rel": "self"
+                }
+            ],
+            "name": "port"
+        }
+    ]
+}
+```
+
 
 #### Comando Geral #### 
 ```bash
