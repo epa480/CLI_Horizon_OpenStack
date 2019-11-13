@@ -1,16 +1,12 @@
-## Operação do OpenStack ##
+# Operação do OpenStack via CLI #
 
-### via Horizon ###
-
-### via CLI ###
-
-#### Pré-Requisitos ####
+## Pré-Requisitos ##
 
 O Openstack utiliza os plugins de autenticação python-keystoneclient que oferece suporte a vários métodos de autenticação.
 
-##### Autenticação #####
+### Autenticação ###
 
-###### via senha ######
+#### via senha ####
 Esse é o tipo de autenticação mais comum. São requisitados: 
 ``` bash
 # Parâmetros obrigatórios
@@ -23,7 +19,7 @@ No minicurso, é usado para autenticação via CLI
 --os-password		# Senha do usuário 
 ```
 
-###### via token ######
+##### via token #####
 Nesse tipo de autenticação, são necessários apenas dois parâmetros.
 ```bash
 # Parâmetros obrigatórios
@@ -140,14 +136,30 @@ curl -s \
 }
 ```
 
+## Comandos Comuns ##
+Depois da autenticação, podemos operar o OpenStack via CLI utilizando o python-keystoneclient.
 
-#### Comando Geral #### 
-```bash
-openstack command list # retorna todos comandos relacionados a cada grupo ou módulo
-
-# Em caso de dúvidas nos parâmetros de um comando, utiliza-se o "-h" no final do comando, como é apresentado abaixo
-openstack <comando> -h 
+Para listar todos os comandos que podem ser utilizados no OpenStack, utilizamos o seguinte comando.
+``` bash
+$ openstack command list
 ```
+É retornado todos os comandos para cada tipo de serviço dentro do OpenStack. Por exemplo, para o serviço de computação, é listado todos os comandos para instanciar uma VM, verificar status dos hypervisor etc. 
+
+Em caso de dúvidas em como utilizar algum comando ou deseja saber quais são os parâmetros obrigatórios e opcionais, podemos utilizar o seguinte comando.
+```bash
+$ openstack <COMANDO DESEJADO> -h
+```
+Pode-se digitar o comando todo ou parte dele. Por exemplo:
+```bash
+# comando parcial
+$ openstack server -h
+# retorna todos os comandos que se iniciam com 'openstack server'
+
+# comando completo
+$ openstack server create -h
+# retorna a forma de utilização do comando 'openstack server create'
+```
+
 
 #### Comandos Comuns #### 
 ```bash
