@@ -18,15 +18,71 @@ Esse é o tipo de autenticação mais comum. São requisitados:
 --os-project-name	# Um projeto
 --os-username		# Usuário
 
+No minicurso, é usado para autenticação via CLI
 # Parâmetros opcionais
 --os-password		# Senha do usuário 
 ```
 
+###### via token ######
+Nesse tipo de autenticação, são necessários apenas dois parâmetros.
+```bash
+# Parâmetros obrigatórios
+--os-auth-url
+--os-token
+```
+Essa autenticação é utilizada quando é utilizada o curl. Exemplo de requisição de um token:
+``` curl
+curl -i \
+  -H "Content-Type: application/json" \
+  -d '
+{ "auth": {
+    "identity": {
+      "methods": ["password"],
+      "password": {
+        "user": {
+          "name": "<USUÁRIO>",
+          "domain": { "id": "default" },
+          "password": "<SENHA>"
+        }
+      }
+    }
+  }
+}' \
+  "http://192.168.0.65:5000/v3/auth/tokens" ; echo
 
-um projeto, nome de usuário e senha para identificação do usuário. 
- 
+```
 
-###### via token######
+Resposta da requisição
+``` curl
+HTTP/1.1 201 Created
+X-Subject-Token: MIIFvgY...
+Vary: X-Auth-Token
+Content-Type: application/json
+Content-Length: 1025
+Date: Tue, 10 Jun 2014 20:55:16 GMT
+
+{
+  "token": {
+    "methods": ["password"],
+    "roles": [{
+      "id": "9fe2ff9ee4384b1894a90878d3e92bab",
+      "name": "_member_"
+    }, {
+      "id": "c703057be878458588961ce9a0ce686b",
+      "name": "admin"
+    }],
+    "expires_at": "2014-06-10T2:55:16.806001Z",
+    "project": {
+      "domain": {
+        "id": "default",
+        "name": "Default"
+      },
+      "id": "8538a3f13f9541b28c2620eb19065e45",
+      "name": "admin"
+    },
+...
+```
+O token é retornado na variável 'X-Subject-Token', localizado na segunda linha da resposta
 
 #### Comando Geral #### 
 ```bash
