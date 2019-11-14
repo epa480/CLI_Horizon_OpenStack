@@ -29,7 +29,7 @@ O minicurso de instalação e operação do OpenStack está voltado para os mód
 ### 3.1 Visão Geral do OpenStack ###
 
 ![](/Figuras/tela_inicial.png)
-Figura 1 - Visão Geral
+**Figura 1 - Visão Geral**
 
 Aba Projeto - Mostra todos os recursos de um projeto para gerência e execução. Os recursos são divididos em duas partes: Computação (Instâncias, Imagens, Pares de Chave,) e Rede (Redes, Roteadores, Grupos de Segurança e IPs Flutuantes).
 
