@@ -42,7 +42,7 @@ Como membro, é possível: visualizar o projetos que o usuário está cadastrado
 
 O módulo **Cinder** tem como objetivo ser o repositório de imagens que serão usadas nas VMs.
 
-Para verificar o conjunto de imagens que o projeto que estamos utilizando possui visibilidade, na **Aba Projeto > Computação > Imagens**, conforme é mostrado na Figura Abaixo.
+Para verificar o conjunto de imagens que o projeto que estamos utilizando possui visibilidade, na **Aba Projeto > Computação > Imagens**, conforme é mostrado na Figura abaixo.
 ![Imagens](Figuras/imagem_01.png)
 **Figura 2 - Imagens**
 
@@ -59,7 +59,19 @@ O OpenStack suporta os formatos: ISO, OVA, FLOOP, QCOW2, Raw, VDI, VMDK, AKI, AM
 Colocamos o nome da imagem como 'cirros', selecionamos o caminho da imagem e marcamos o formato da imagem cirros como QCOW2 e por fim clicamos no botão **Criar Imagem**.
 
 ### 3.3. Criação de Flavor ###
+O serviço de repositório de flavor faz parte do módulo **Nova**. 
 
+Para a visualização e criação dos flavors, é preciso o acesso de administrador. Na **Aba Admin > Computação > Sabores**, é possível visualizar todos os flavors existentes no OpenStack, conforme é ilustrado na Figura abaixo
+
+![Flavor](Figuras/flavor_01.png)
+**Figura 4 - Flavor**
+
+Para adicionar um novo flavor, clicamos no botão **Criar Sabor**.
+![Flavor](Figuras/flavor_02.png)
+**Figura 5 - Criar Flavor**
+
+Irá aparecer uma nova página pedindo algumas informações para a criação de um flavor no OpenStack. As informações obrigatórias são: **Nome**, **vCPUs**, **RAM**, **Risco Raíz**. Por padrão o Fator RX/TX é 1, mas pode ser alterado para qualquer número inteiro maior ou igual a 1. As informações adicionais são Disco Efemero e Disco Swap que por padrão tem valor 0. Outra informação 
+que é opcional está na **sub-aba Acesso ao Sabor** que indica quais projetos que podem ou não visualizar o flavor, basta selecionar os projetos que o usuário deseja que o flavor esteja visível. Caso não marque nenhum, o flavor será visível para todos os projetos. 
 
 
 
