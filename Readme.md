@@ -11,8 +11,8 @@ Instalação
   - Subredes
   - IPs Flutuantes
 - Instanciar VMs
-Usando a CLI
-Desenvolvimento com APIs
+- Usando a CLI
+- Desenvolvimento com APIs
 
 
 ## 2. Introdução ##
