@@ -2,7 +2,17 @@
 
 ## 1. Agenda
 
-Escrever a agenda do minicurso
+- Instalação
+- **Operando via Horizon** 
+  - **Visão Geral**
+  - Instanciar Imagem
+  - Criar Flavor
+  - Criar Redes
+    - Subredes
+    - IPs Flutuantes
+  - Instanciar VMs
+- Usando a CLI
+- Desenvolvimento com APIs
 
 
 ## 2. Introdução ##
@@ -14,16 +24,21 @@ O minicurso de instalação e operação do OpenStack está voltado para os mód
 - Neutron - É responsável pelo gerencimanto dos recursos de rede do OpenStack. Ele cria as vNICs para as VMs, redes, subnets etc.
 - Glance - É responsável por gerir as imagens que são usadas nas VMs.
 
-## Operação do OpenStack via Horizon ##
+## 3. Operação do OpenStack via Horizon ##
 
-### Visão Geral do OpenStack ###
+### 3.1 Visão Geral do OpenStack ###
 
 ![](/Figuras/tela_inicial.png)
-Figura 1 - Visão Geral
+**Figura 1 - Visão Geral**
 
 Aba Projeto - Mostra todos os recursos de um projeto para gerência e execução. Os recursos são divididos em duas partes: Computação (Instâncias, Imagens, Pares de Chave,) e Rede (Redes, Roteadores, Grupos de Segurança e IPs Flutuantes).
 
-Aba Admin - 
+Aba Admin - (Apenas para usuários compermissão de Administrador) Mostra uma visão geral dos recursos no OpenStack. Pode-se visualizar, criar snapshot, migrar, ligar/pausar/desligar/excluir instâncias; criar/modificar flavors; instanciar/modificar imagens; criar/modificar redes; criar/modificar subredes; editar Roteadores; alocar/Desalocar IPs flutuantes para projetos; verificar o pool de recursos disponíveis de computação e rede.
+
+Aba Identidade - (Algumas funcionalides só aparecem quando o usuário é Admininstrador). Como administrador, é possível: criar/modificar projetos, adicionar/remover membros à projetos; criar/remover usuários, trocar usuários de projetos primários; criação/modificação de grupos de usuários ; e por fim a criação de credencias de aplicação (autenticação via CLI) podendo limitar o tempo de utilização das credenciais.
+Como membro, é possível: visualizar o projetos que o usuário está cadastrado, visualizar os dados do seu usuário e criar credenciais de aplicação (lembrando que essa credencial está limitada a realizar certas operações que só o admin pode fazer).
+
+
 
 ### ###
 
@@ -42,14 +57,12 @@ O Openstack utiliza os plugins de autenticação python-keystoneclient que ofere
 ##### via senha #####
 Esse é o tipo de autenticação mais comum. São requisitados: 
 ``` bash
-# Parâmetros obrigatórios
---os-auth-url    	# URL para autenticação com o serviço de identidade
---os-project-name	# Um projeto
---os-username		# Usuário
-
-No minicurso, é usado para autenticação via CLI
-# Parâmetros opcionais
---os-password		# Senha do usuário 
+$ export OS_IDENTITY_API_VERSION=3                
+$ export OS_AUTH_URL=http://<IP>:5000/v3   
+$ export OS_DEFAULT_DOMAIN=default               
+$ export OS_USERNAME=<USER>                      
+$ export OS_PASSWORD=<PASSWORD>                     
+$ export OS_PROJECT_NAME=<PROJECT>                  
 ```
 
 ##### via token #####
@@ -78,7 +91,6 @@ curl -i \
   }
 }' \
   "http://192.168.0.65:5000/v3/auth/tokens" ; echo
-
 ```
 
 Resposta da requisição
