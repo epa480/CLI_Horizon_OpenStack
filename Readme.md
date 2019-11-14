@@ -42,14 +42,12 @@ O Openstack utiliza os plugins de autenticação python-keystoneclient que ofere
 ##### via senha #####
 Esse é o tipo de autenticação mais comum. São requisitados: 
 ``` bash
-# Parâmetros obrigatórios
---os-auth-url    	# URL para autenticação com o serviço de identidade
---os-project-name	# Um projeto
---os-username		# Usuário
-
-No minicurso, é usado para autenticação via CLI
-# Parâmetros opcionais
---os-password		# Senha do usuário 
+$ export OS_IDENTITY_API_VERSION=3                
+$ export OS_AUTH_URL=http://<IP>:5000/v3   
+$ export OS_DEFAULT_DOMAIN=default               
+$ export OS_USERNAME=<USER>                      
+$ export OS_PASSWORD=<PASSWORD>                     
+$ export OS_PROJECT_NAME=<PROJECT>                  
 ```
 
 ##### via token #####
@@ -78,7 +76,6 @@ curl -i \
   }
 }' \
   "http://192.168.0.65:5000/v3/auth/tokens" ; echo
-
 ```
 
 Resposta da requisição
