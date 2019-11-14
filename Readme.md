@@ -24,9 +24,9 @@ O minicurso de instalação e operação do OpenStack está voltado para os mód
 - Neutron - É responsável pelo gerencimanto dos recursos de rede do OpenStack. Ele cria as vNICs para as VMs, redes, subnets etc.
 - Glance - É responsável por gerir as imagens que são usadas nas VMs.
 
-## Operação do OpenStack via Horizon ##
+## 3. Operação do OpenStack via Horizon ##
 
-### Visão Geral do OpenStack ###
+### 3.1 Visão Geral do OpenStack ###
 
 ![](/Figuras/tela_inicial.png)
 Figura 1 - Visão Geral
