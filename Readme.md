@@ -33,8 +33,9 @@ Figura 1 - Visão Geral
 
 Aba Projeto - Mostra todos os recursos de um projeto para gerência e execução. Os recursos são divididos em duas partes: Computação (Instâncias, Imagens, Pares de Chave,) e Rede (Redes, Roteadores, Grupos de Segurança e IPs Flutuantes).
 
-Aba Admin - 
+Aba Admin - (Apenas para usuários compermissão de Administrador) Mostra uma visão geral dos recursos no OpenStack. Pode-se visualizar, criar snapshot, migrar, Ligar/Pausar/Desligar/Excluir instâncias; criar/modificar flavors; instanciar/modificar imagens; Criar/Modificar redes; Criar/Modificar subredes; Editar Roteadores; Alocar/Desalocar IPs Flutuantes para projetos; Verificar o pool de recursos disponíveis quotas de computação e rede etc.
 
+Aba Identidade
 ### ###
 
 
