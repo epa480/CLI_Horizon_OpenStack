@@ -5,7 +5,7 @@
 - Instalação
 - **Operando via Horizon** 
   - **Visão Geral**
-  - Instanciar Imagem
+  - **Criar Imagem**
   - Criar Flavor
   - Criar Redes
     - Subredes
@@ -50,14 +50,15 @@ Para verificar o conjunto de imagens que o projeto que estamos utilizando possui
 ![Criar Imagem](Figuras/imagem_03.png)
 **Figura 3 - Criar imagem**
 
-Irá aparecer uma nova página pedindo algumas informações obrigatórias e outras opcicionais para a criação de uma imagem no OpenStack. As informações obrigatórias são: **Nome da Imagem**, **Arquivo** e **Formato**. Os outros dados são opcionais e caso a imagem que será carregada necessita de algum pré-requisito como tamanho mínimo do Disco e/ou memória ou adição de metadado. Por padrão, já estão selecionadas as opções da nova imagem estar visível ao público e desprotegida, mas pode-se alterar essas opções.
+Irá aparecer uma nova página pedindo algumas informações, sendo algumas obrigatórias e outras opcicionais, para a criação de uma imagem no OpenStack. As informações obrigatórias são: **Nome da Imagem**, **Arquivo** e **Formato**. As informações opcionais são utilizadas quando a imagem que será carregada para o OpenStack necessita de algum pré-requisito como tamanho mínimo de Disco, memória ou metadado. Por padrão, já estão selecionadas as opções da nova imagem estar visível ao público e desprotegida, mas pode-se alterar essas opções.
 
-Para o minicurso, baixamos a imagem cirros do site de [repositórios do OpenStack](https://docs.openstack.org/image-guide/obtain-images.html). Esse site, contém um conjunto de imagens ou direcionamento para as imagens: CentOS, CirrOS, Debian, Fedora, Windows, Ubuntu, openSUSE, Red Hat. Pode-se também criar imagens customizadas para adicionar no repositório do OpenStack, uma das maneirais é preparar levantar uma imagem no Virtual Box, adicinar todas as customizações e por fim instalar o **cloud-init**.
+Para o minicurso, baixamos a imagem cirros do site de [repositórios de imagens para o OpenStack](https://docs.openstack.org/image-guide/obtain-images.html). Esse site, contém um conjunto de imagens ou direcionamento para as imagens: CentOS, CirrOS, Debian, Fedora, Windows, Ubuntu, openSUSE, Red Hat. Pode-se também criar imagens customizadas para adicionar no repositório do OpenStack, uma das maneirais é preparar levantar uma imagem no Virtual Box, adicinar todas as customizações e por fim instalar o **cloud-init**.
 
 O OpenStack suporta os formatos: ISO, OVA, FLOOP, QCOW2, Raw, VDI, VMDK, AKI, AMI, ARI, Docker.
 
-Colocamos o nome da imagem como 'cirros', selecionamos o caminho da imagem e marcamos o formato da imagem cirros como QCOW2 e por fim selecionamos o botão **Criar Imagem**.
+Colocamos o nome da imagem como 'cirros', selecionamos o caminho da imagem e marcamos o formato da imagem cirros como QCOW2 e por fim clicamos no botão **Criar Imagem**.
 
+### 3.3. Criação de Flavor ###
 
 
 
