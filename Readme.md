@@ -2,15 +2,15 @@
 
 ## 1. Agenda
 
-Instalação
-**Operando via Horizon** 
-- **Visão Geral**
-- Instanciar Imagem
-- Criar Flavor
-- Criar Redes
-  - Subredes
-  - IPs Flutuantes
-- Instanciar VMs
+- Instalação
+- **Operando via Horizon** 
+  - **Visão Geral**
+  - Instanciar Imagem
+  - Criar Flavor
+  - Criar Redes
+    - Subredes
+    - IPs Flutuantes
+  - Instanciar VMs
 - Usando a CLI
 - Desenvolvimento com APIs
 
