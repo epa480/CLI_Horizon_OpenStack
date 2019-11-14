@@ -40,7 +40,7 @@ Como membro, é possível: visualizar o projetos que o usuário está cadastrado
 
 ### 3.2. Imagens ###
 
-O módulo Cinder é tem a funçao de ser o repositório de imagens que serão usadas nas VMs.
+O módulo **Cinder** tem como objetivo ser o repositório de imagens que serão usadas nas VMs.
 
 Para verificar o conjunto de imagens que o projeto que estamos utilizando possui visibilidade, na **Aba Projeto > Computação > Imagens**, conforme é mostrado na Figura Abaixo.
 ![Imagens](Figuras/imagem_01.png)
@@ -49,6 +49,14 @@ Para verificar o conjunto de imagens que o projeto que estamos utilizando possui
 É possível visualizar todas as imagens que estão visiveis ao projeto que estamos usando. Para adicionar uma nova imagem no projeto, clicamos no botão **Criar Imagem**.
 ![Criar Imagem](Figuras/imagem_02.png)
 **Figura 3 - Criar imagem **
+
+Irá aparecer uma nova página pedindo algumas informações obrigatórias e outras opcicionais para a criação de uma imagem no OpenStack. As informações obrigatórias são: **Nome da Imagem**, **Arquivo** e **Formato**. Os outros dados são opcionais e caso a imagem que será carregada necessita de algum pré-requisito como tamanho mínimo do Disco e/ou memória ou adição de metadado. Por padrão, já estão selecionadas as opções da nova imagem estar visível ao público e desprotegida, mas pode-se alterar essas opções.
+
+Para o minicurso, baixamos a imagem cirros do site de [repositórios do OpenStack](https://docs.openstack.org/image-guide/obtain-images.html). Esse site, contém um conjunto de imagens ou direcionamento para as imagens: CentOS, CirrOS, Debian, Fedora, Windows, Ubuntu, openSUSE, Red Hat. Pode-se também criar imagens customizadas para adicionar no repositório do OpenStack, uma das maneirais é preparar levantar uma imagem no Virtual Box, adicinar todas as customizações e por fim instalar o **cloud-init**.
+
+O OpenStack suporta os formatos: ISO, OVA, FLOOP, QCOW2, Raw, VDI, VMDK, AKI, AMI, ARI, Docker.
+
+Colocamos o nome da imagem como 'cirros', selecionamos o caminho da imagem e marcamos o formato da imagem cirros como QCOW2 e por fim selecionamos o botão **Criar Imagem**.
 
 
 
