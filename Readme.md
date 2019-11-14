@@ -6,7 +6,7 @@
 - **Operando via Horizon** 
   - **Visão Geral**
   - **Criar Imagem**
-  - Criar Flavor
+  - **Criar Flavor**
   - Criar Redes
     - Subredes
     - IPs Flutuantes
