@@ -33,9 +33,13 @@ Figura 1 - Visão Geral
 
 Aba Projeto - Mostra todos os recursos de um projeto para gerência e execução. Os recursos são divididos em duas partes: Computação (Instâncias, Imagens, Pares de Chave,) e Rede (Redes, Roteadores, Grupos de Segurança e IPs Flutuantes).
 
-Aba Admin - (Apenas para usuários compermissão de Administrador) Mostra uma visão geral dos recursos no OpenStack. Pode-se visualizar, criar snapshot, migrar, Ligar/Pausar/Desligar/Excluir instâncias; criar/modificar flavors; instanciar/modificar imagens; Criar/Modificar redes; Criar/Modificar subredes; Editar Roteadores; Alocar/Desalocar IPs Flutuantes para projetos; Verificar o pool de recursos disponíveis quotas de computação e rede etc.
+Aba Admin - (Apenas para usuários compermissão de Administrador) Mostra uma visão geral dos recursos no OpenStack. Pode-se visualizar, criar snapshot, migrar, ligar/pausar/desligar/excluir instâncias; criar/modificar flavors; instanciar/modificar imagens; criar/modificar redes; criar/modificar subredes; editar Roteadores; alocar/Desalocar IPs flutuantes para projetos; verificar o pool de recursos disponíveis de computação e rede.
 
-Aba Identidade
+Aba Identidade - (Algumas funcionalides só aparecem quando o usuário é Admininstrador). Como administrador, é possível: criar/modificar projetos, adicionar/remover membros à projetos; criar/remover usuários, trocar usuários de projetos primários; criação/modificação de grupos de usuários ; e por fim a criação de credencias de aplicação (autenticação via CLI) podendo limitar o tempo de utilização das credenciais.
+Como membro, é possível: visualizar o projetos que o usuário está cadastrado, visualizar os dados do seu usuário e criar credenciais de aplicação (lembrando que essa credencial está limitada a realizar certas operações que só o admin pode fazer).
+
+
+
 ### ###
 
 
