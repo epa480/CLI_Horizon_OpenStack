@@ -44,11 +44,11 @@ O módulo **Cinder** tem como objetivo ser o repositório de imagens que serão 
 
 Para verificar o conjunto de imagens que o projeto que estamos utilizando possui visibilidade, na **Aba Projeto > Computação > Imagens**, conforme é mostrado na Figura Abaixo.
 ![Imagens](Figuras/imagem_01.png)
-**Figura 2 - Imagens **
+**Figura 2 - Imagens**
 
 É possível visualizar todas as imagens que estão visiveis ao projeto que estamos usando. Para adicionar uma nova imagem no projeto, clicamos no botão **Criar Imagem**.
-![Criar Imagem](Figuras/imagem_02.png)
-**Figura 3 - Criar imagem **
+![Criar Imagem](Figuras/imagem_03.png)
+**Figura 3 - Criar imagem**
 
 Irá aparecer uma nova página pedindo algumas informações obrigatórias e outras opcicionais para a criação de uma imagem no OpenStack. As informações obrigatórias são: **Nome da Imagem**, **Arquivo** e **Formato**. Os outros dados são opcionais e caso a imagem que será carregada necessita de algum pré-requisito como tamanho mínimo do Disco e/ou memória ou adição de metadado. Por padrão, já estão selecionadas as opções da nova imagem estar visível ao público e desprotegida, mas pode-se alterar essas opções.
 
