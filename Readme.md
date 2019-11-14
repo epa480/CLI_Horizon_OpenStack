@@ -28,7 +28,7 @@ O minicurso de instalação e operação do OpenStack está voltado para os mód
 
 ### 3.1 Visão Geral do OpenStack ###
 
-![](/Figuras/tela_inicial.png)
+![Visão Geral do OpenStack](/Figuras/tela_inicial.png) 
 **Figura 1 - Visão Geral**
 
 Aba Projeto - Mostra todos os recursos de um projeto para gerência e execução. Os recursos são divididos em duas partes: Computação (Instâncias, Imagens, Pares de Chave,) e Rede (Redes, Roteadores, Grupos de Segurança e IPs Flutuantes).
@@ -38,9 +38,18 @@ Aba Admin - (Apenas para usuários compermissão de Administrador) Mostra uma vi
 Aba Identidade - (Algumas funcionalides só aparecem quando o usuário é Admininstrador). Como administrador, é possível: criar/modificar projetos, adicionar/remover membros à projetos; criar/remover usuários, trocar usuários de projetos primários; criação/modificação de grupos de usuários ; e por fim a criação de credencias de aplicação (autenticação via CLI) podendo limitar o tempo de utilização das credenciais.
 Como membro, é possível: visualizar o projetos que o usuário está cadastrado, visualizar os dados do seu usuário e criar credenciais de aplicação (lembrando que essa credencial está limitada a realizar certas operações que só o admin pode fazer).
 
+### 3.2. Imagens ###
 
+O módulo Cinder é tem a funçao de ser o repositório de imagens que serão usadas nas VMs.
 
-### ###
+Para verificar o conjunto de imagens que o projeto que estamos utilizando possui visibilidade, na **Aba Projeto > Computação > Imagens**, conforme é mostrado na Figura Abaixo.
+![Imagens](Figuras/imagem_01.png)
+**Figura 2 - Imagens **
+
+É possível visualizar todas as imagens que estão visiveis ao projeto que estamos usando. Para adicionar uma nova imagem no projeto, clicamos no botão **Criar Imagem**.
+![Criar Imagem](Figuras/imagem_02.png)
+**Figura 3 - Criar imagem **
+
 
 
 
