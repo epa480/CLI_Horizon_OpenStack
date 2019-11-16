@@ -73,8 +73,16 @@ Para adicionar um novo flavor, clicamos no botão **Criar Sabor**.
 Irá aparecer uma nova página pedindo algumas informações para a criação de um flavor no OpenStack. As informações obrigatórias são: **Nome**, **vCPUs**, **RAM**, **Risco Raíz**. Por padrão o Fator RX/TX é 1, mas pode ser alterado para qualquer número inteiro maior ou igual a 1. As informações adicionais são Disco Efemero e Disco Swap que por padrão tem valor 0. Outra informação 
 que é opcional está na **sub-aba Acesso ao Sabor** que indica quais projetos que podem ou não visualizar o flavor, basta selecionar os projetos que o usuário deseja que o flavor esteja visível. Caso não marque nenhum, o flavor será visível para todos os projetos. 
 
+### 3.4. Criar Redes ###
+É possível criar redes através de duas abas. A primeira maneira é na aba **Projeto > Rede > Topologia de Redes**. Nesta aba é apresentada a topologia de redes de forma geral, em forma de gráfico, podendo observar todas as redes disponíveis no OpenStack. Ela só mostra os dispositivos, sejam eles roteadores e /ou máquinas virtuais, que estão no projeto em questão. Nesta aba é possível: levantar uma instância, criar rede e cria roteador.
 
+Nela é possível visualizar todas as redes do OpenStack, porém só conseguimos observar todos os disposivivos, sejam eles roteadores e/ou máquinas virtuais, que estão no projeto em questão. Nessa aba é possível Levantar uma instância , criar rede e criar roteador.
 
+A segunda maneira é através da aba **Projeto > Rede > Redes**. Nesta aba observamos melhor as redes disponíveis no OpenStack, podendo visualizar o nome, subredes e o seu endereçamento, conforme é ilustrado na Figura abaixo.
+
+FIGURA - Redes (Projeto > Redes > Rede)
+
+Para criar uma nova rede, clicamos no botão **Criar Rede**, localizado no canto superior à direita da Figura acima.
 
 ## Via CLI ##
 
