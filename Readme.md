@@ -74,15 +74,15 @@ Irá aparecer uma nova página pedindo algumas informações para a criação de
 que é opcional está na **sub-aba Acesso ao Sabor** que indica quais projetos que podem ou não visualizar o flavor, basta selecionar os projetos que o usuário deseja que o flavor esteja visível. Caso não marque nenhum, o flavor será visível para todos os projetos. 
 
 ### 3.4. Criar Redes ###
-É possível criar redes através de duas abas. A primeira maneira é na aba **Projeto > Rede > Topologia de Redes**. Nesta aba é apresentada a topologia de redes de forma geral, em forma de gráfico, podendo observar todas as redes disponíveis no OpenStack. Ela só mostra os dispositivos, sejam eles roteadores e /ou máquinas virtuais, que estão no projeto em questão. Nesta aba é possível: levantar uma instância, criar rede e cria roteador.
+É possível criar redes através de duas abas. A primeira maneira é na aba **Projeto > Rede > Topologia de Redes**. Nesta aba é apresentada a topologia de redes de forma geral, em forma de gráfico, podendo observar todas as redes disponíveis no OpenStack. Pode-se observar apenas o endereçamento a mascara de rede das redes que estão compartiplhadas, para as redes que não compartilhadas é possível verificar apenas o seu nome. É possível verificar os dispositivos, sejam eles roteadores e/ou máquinas virtuais, que estão no projeto em questça. Nesta aba é possível: levantar uma instância, criar rede e criar roteador.
 
-Nela é possível visualizar todas as redes do OpenStack, porém só conseguimos observar todos os disposivivos, sejam eles roteadores e/ou máquinas virtuais, que estão no projeto em questão. Nessa aba é possível Levantar uma instância , criar rede e criar roteador.
+**FIGURA - Topologia de Redes (Projeto > Rede > Topologia de Rede)**
 
-A segunda maneira é através da aba **Projeto > Rede > Redes**. Nesta aba observamos melhor as redes disponíveis no OpenStack, podendo visualizar o nome, subredes e o seu endereçamento, conforme é ilustrado na Figura abaixo.
+A segunda maneira é através da aba **Projeto > Rede > Redes**. Nesta aba observamos melhor as redes disponíveis no OpenStack, podendo visualizar o nome, subredes e o seu endereçamento caso estejam compartilhado, conforme é ilustrado na Figura abaixo.
 
-FIGURA - Redes (Projeto > Redes > Rede)
+**FIGURA - Redes (Projeto > Redes > Rede)**
 
-Para criar uma nova rede, clicamos no botão **Criar Rede**, localizado no canto superior à direita da Figura acima.
+Para criar uma nova rede, vamos utilizar a segunda maneira. Clicamos no botão **Criar Rede**, localizado no canto superior à direita da Figura acima.
 
 ## Via CLI ##
 
