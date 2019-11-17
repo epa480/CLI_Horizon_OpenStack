@@ -84,6 +84,10 @@ A segunda maneira é através da aba **Projeto > Rede > Redes**. Nesta aba obser
 
 Para criar uma nova rede, vamos utilizar a segunda maneira. Clicamos no botão **Criar Rede**, localizado no canto superior à direita da Figura acima.
 
+**FIGURA - Criar Rede**
+
+Irá aparecer uma nova página para a criação de redes. Esta nova página é composta por 3 sub-abas: Rede, Sub-Rede, Detalhes da Sub-Rede. A primeira sub-aba é Rede e nela 
+
 ## Via CLI ##
 
 ### Pré-Requisitos ###
