@@ -74,6 +74,16 @@ Irá aparecer uma nova página pedindo algumas informações para a criação de
 que é opcional está na **sub-aba Acesso ao Sabor** que indica quais projetos que podem ou não visualizar o flavor, basta selecionar os projetos que o usuário deseja que o flavor esteja visível. Caso não marque nenhum, o flavor será visível para todos os projetos. 
 
 ### 3.4. Criar Redes ###
+Quando a nuvem é criada, ela não tem nenhuma rede criada internamente, necessitando fazer a criação da **rede provider** (Acesso externo), **redes internas** (para instanciar as VMs) e os **roteadores** para a interconexão entre elas.
+
+A _**rede provider**_ é criada em modo administrador na **Aba Administrador > Rede > Redes**. Nela podemos observar todas as redes conforme é ilustrado na Figura abaixo.
+
+![Redes](Figuras/network_00.png)
+
+
+
+
+
 É possível criar redes através de duas abas. A primeira maneira é na aba **Projeto > Rede > Topologia de Redes**. Nesta aba é apresentada a topologia de redes de forma geral, em forma de gráfico, podendo observar todas as redes disponíveis no OpenStack. Pode-se observar apenas o endereçamento a mascara de rede das redes que estão compartiplhadas, para as redes que não compartilhadas é possível verificar apenas o seu nome. É possível verificar os dispositivos, sejam eles roteadores e/ou máquinas virtuais, que estão no projeto em questça. Nesta aba é possível: levantar uma instância, criar rede e criar roteador.
 
 **FIGURA - Topologia de Redes (Projeto > Rede > Topologia de Rede)**
