@@ -7,7 +7,7 @@
   - **Visão Geral**
   - **Criar Imagem**
   - **Criar Flavor**
-  - Criar Redes
+  - **Criar Redes**
     - Subredes
     - IPs Flutuantes
   - Instanciar VMs
@@ -59,6 +59,7 @@ O OpenStack suporta os formatos: ISO, OVA, FLOOP, QCOW2, Raw, VDI, VMDK, AKI, AM
 Colocamos o nome da imagem como 'cirros', selecionamos o caminho da imagem e marcamos o formato da imagem cirros como QCOW2 e por fim clicamos no botão **Criar Imagem**.
 
 ### 3.3. Criação de Flavor ###
+
 O serviço de repositório de flavor faz parte do módulo **Nova**. 
 
 Para a visualização e criação dos flavors, é preciso o acesso de administrador. Na **Aba Admin > Computação > Sabores**, é possível visualizar todos os flavors existentes no OpenStack, conforme é ilustrado na Figura abaixo
@@ -79,12 +80,21 @@ Quando a nuvem é criada, ela não tem nenhuma rede criada internamente, necessi
 A _**rede provider**_ é criada em modo administrador na **Aba Administrador > Rede > Redes**. Nela podemos observar todas as redes conforme é ilustrado na Figura abaixo.
 
 ![Redes](Figuras/network_00.png)
+**Figura 6 - Network**
 
+Para criar uma rede, clicamos no botão **Criar Rede** que irá aparecer uma nova página conforme a Figura Abaixo.
 
+![Redes](Figuras/network_01.png)
+**Figura 6 - Criar Rede externa**
 
+A página de criação de redes possui 3 sub-abas: Rede, Sub-rede e Detalhes da sub-rede. A sub-aba Rede é responsável pela definição do nome da rede, em qual projeto essa rede vai estar conectada, o tipo de provedor da rede podendo ser: Local, Flat, VLAN, GRE, VXLAN e Geneve. Ela possui outros atributos como compartilhado, rede externa e sub-rede que indicam, respectivamente, em qual  projeto primário a rede vai estar alocada, indica se a rede criada será a provider, e caso seja marcada esta opção, as  demais sub-abas para a criação de sub-redes são disponibilizadas.
 
+Na sub-aba Sub-rede colocamos o nome da sub-rede, endereçamento de rede, a versão do IP, e o IP do Gateway. Caso não seja adicionado o IP do Gateway, o OpenStack pega o primeiro endereço da sub-rede e atribui para o IP do Gateway.
 
-É possível criar redes através de duas abas. A primeira maneira é na aba **Projeto > Rede > Topologia de Redes**. Nesta aba é apresentada a topologia de redes de forma geral, em forma de gráfico, podendo observar todas as redes disponíveis no OpenStack. Pode-se observar apenas o endereçamento a mascara de rede das redes que estão compartiplhadas, para as redes que não compartilhadas é possível verificar apenas o seu nome. É possível verificar os dispositivos, sejam eles roteadores e/ou máquinas virtuais, que estão no projeto em questça. Nesta aba é possível: levantar uma instância, criar rede e criar roteador.
+A sub-aba Detalhes da Sub-Rede o DHCP estará habilitado e podemos adicionar manualmente o pool de alocação insindo "start_ip_address, end_ip_address", lista de servidores DNS adicionando um por linha e as rotas de host.
+
+Após a criaçao da rede externa, podemos criar as redes internas tanto pela aba Admin quanto pela aba Projetos. Via aba projetos existem duas maneiras. A primeira maneira é na aba **Projeto > Rede > Topologia de Redes**. Nesta aba é apresentada a topologia de rede em forma de gráficos, ao qual podemos visualizar todas as redes disponíveis no OpenStack, porém só podemos observar o endereçamento e a mascara de rede das redes que estão compartilhadas. Podemos também observar todos os elementos, sejam eles roteadores e/ou máquinas virtuais, que estão no projeto em questão. Nesta aba é possível: levantar uma instância, criar rede e criar roteador.
+
 
 **FIGURA - Topologia de Redes (Projeto > Rede > Topologia de Rede)**
 
@@ -96,7 +106,8 @@ Para criar uma nova rede, vamos utilizar a segunda maneira. Clicamos no botão *
 
 **FIGURA - Criar Rede**
 
-Irá aparecer uma nova página para a criação de redes. Esta nova página é composta por 3 sub-abas: Rede, Sub-Rede, Detalhes da Sub-Rede. A primeira sub-aba é Rede e nela 
+Irá aparecer uma nova página para a criação de redes. É semelhante à forma da criação de redes em modo Administrador, porém mais resumido. Na sub-aba Rede só precisamos do nome da rede e das opções Compartilhado, Criar sub-rede. Por padrão, todas as redes internas criadas via aba projeto serão do tipo vxlan que o OpenStack irá atribuir de forma automática o ID de segmentação. Caso a opção Criar sub-rede estiver marcada, serão acrescentadas duas sub-abas para a configuração de endereçamento e pool de recusos, como os possíveis endereçamentos, DNS, Gateway, de forma semelhante à criação da rede provider.
+
 
 ## Via CLI ##
 
