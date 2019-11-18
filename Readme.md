@@ -95,16 +95,18 @@ A sub-aba Detalhes da Sub-Rede o DHCP estará habilitado e podemos adicionar man
 
 Após a criaçao da rede externa, podemos criar as redes internas tanto pela aba Admin quanto pela aba Projetos. Via aba projetos existem duas maneiras. A primeira maneira é na aba **Projeto > Rede > Topologia de Redes**. Nesta aba é apresentada a topologia de rede em forma de gráficos, ao qual podemos visualizar todas as redes disponíveis no OpenStack, porém só podemos observar o endereçamento e a mascara de rede das redes que estão compartilhadas. Podemos também observar todos os elementos, sejam eles roteadores e/ou máquinas virtuais, que estão no projeto em questão. Nesta aba é possível: levantar uma instância, criar rede e criar roteador.
 
-
-**FIGURA - Topologia de Redes (Projeto > Rede > Topologia de Rede)**
+![Topologia de Rede](Figuras/network_07.png)
+**FIGURA 8 - Topologia de Redes**
 
 A segunda maneira é através da aba **Projeto > Rede > Redes**. Nesta aba observamos melhor as redes disponíveis no OpenStack, podendo visualizar o nome, subredes e o seu endereçamento caso estejam compartilhado, conforme é ilustrado na Figura abaixo.
 
-**FIGURA - Redes (Projeto > Redes > Rede)**
+![Rede](Figuras/network_04.png)
+**FIGURA 9 - Redes**
 
 Para criar uma nova rede, vamos utilizar a segunda maneira. Clicamos no botão **Criar Rede**, localizado no canto superior à direita da Figura acima.
 
-**FIGURA - Criar Rede**
+![Criar Rede interna](Figuras/network_05.png)
+**FIGURA 10 - Criar Rede interna**
 
 Irá aparecer uma nova página para a criação de redes. É semelhante à forma da criação de redes em modo Administrador, porém mais resumido. Na sub-aba Rede só precisamos do nome da rede e das opções Compartilhado, Criar sub-rede. Por padrão, todas as redes internas criadas via aba projeto serão do tipo vxlan que o OpenStack irá atribuir de forma automática o ID de segmentação. Caso a opção Criar sub-rede estiver marcada, serão acrescentadas duas sub-abas para a configuração de endereçamento e pool de recusos, como os possíveis endereçamentos, DNS, Gateway, de forma semelhante à criação da rede provider.
 
