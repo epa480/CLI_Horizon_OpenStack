@@ -85,7 +85,7 @@ A _**rede provider**_ é criada em modo administrador na **Aba Administrador > R
 Para criar uma rede, clicamos no botão **Criar Rede** que irá aparecer uma nova página conforme a Figura Abaixo.
 
 ![Redes](Figuras/network_01.png)
-**Figura 6 - Criar Rede externa**
+**Figura 7 - Criar Rede externa**
 
 A página de criação de redes possui 3 sub-abas: Rede, Sub-rede e Detalhes da sub-rede. A sub-aba Rede é responsável pela definição do nome da rede, em qual projeto essa rede vai estar conectada, o tipo de provedor da rede podendo ser: Local, Flat, VLAN, GRE, VXLAN e Geneve. Ela possui outros atributos como compartilhado, rede externa e sub-rede que indicam, respectivamente, em qual  projeto primário a rede vai estar alocada, indica se a rede criada será a provider, e caso seja marcada esta opção, as  demais sub-abas para a criação de sub-redes são disponibilizadas.
 
